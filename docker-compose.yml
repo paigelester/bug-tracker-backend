@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  bugtracker.api:
+    image: ${DOCKER_REGISTRY-}bugtrackerapi
+    build:
+      context: .
+      dockerfile: src/services/BugTracker.API/Dockerfile

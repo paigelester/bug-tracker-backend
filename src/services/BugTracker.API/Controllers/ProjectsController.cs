@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -11,6 +12,13 @@ namespace BugTracker.API.Controllers
     [ApiController]
     public class ProjectsController : ControllerBase
     {
+        private readonly IMediator _mediator;
+
+        public ProjectsController(IMediator mediator)
+        {
+            _mediator = mediator;
+        }
+
         // POST: api/Projects
         [HttpPost]
         public async Task<IActionResult> CreateProject(long id)

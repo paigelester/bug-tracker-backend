@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Threading.Tasks;
 using Autofac;
 using BugTracker.Application.Infrastructure.AutofacModules;
@@ -29,8 +30,13 @@ namespace BugTracker.API
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            services.AddDbContext<BugTrackerContext>(p => 
-                p.UseNpgsql(Configuration.GetConnectionString("DefaultConnection")));
+            services
+                .AddDbContext<BugTrackerContext>(options =>
+                    options.UseNpgsql(Configuration.GetConnectionString("DefaultConnection"), pgOptions =>
+                        {
+                            pgOptions.MigrationsAssembly(typeof(Startup).GetTypeInfo().Assembly.GetName().Name);
+                            pgOptions.EnableRetryOnFailure(maxRetryCount: 10, maxRetryDelay: TimeSpan.FromSeconds(30), errorCodesToAdd: null);
+                        }));
         }
 
         public void ConfigureContainer(ContainerBuilder builder)

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace BugTracker.Infrastructure.Entities
+namespace BugTracker.Infrastructure.Models
 {
     public class Project
     {

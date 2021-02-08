@@ -7,9 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BugTracker.API", "src\servi
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BugTracker.Application", "src\services\BugTracker.Application\BugTracker.Application.csproj", "{FC170BAC-6E9E-455D-96A6-7031B1F306BF}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BugTracker.Infrastructure", "src\services\BugTracker.Infrastructure\BugTracker.Infrastructure.csproj", "{10CF01AD-E379-4D66-BA5C-460CBBD4D5FD}"
-EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{E0904DC9-90D6-46EA-9F01-F3533889545A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BugTracker.Infrastructure", "src\services\BugTracker.Infrastructure\BugTracker.Infrastructure.csproj", "{BF0C3907-370B-406F-AA3D-D967FAC51724}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,14 +25,14 @@ Global
 		{FC170BAC-6E9E-455D-96A6-7031B1F306BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FC170BAC-6E9E-455D-96A6-7031B1F306BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FC170BAC-6E9E-455D-96A6-7031B1F306BF}.Release|Any CPU.Build.0 = Release|Any CPU
-		{10CF01AD-E379-4D66-BA5C-460CBBD4D5FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{10CF01AD-E379-4D66-BA5C-460CBBD4D5FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{10CF01AD-E379-4D66-BA5C-460CBBD4D5FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{10CF01AD-E379-4D66-BA5C-460CBBD4D5FD}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E0904DC9-90D6-46EA-9F01-F3533889545A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E0904DC9-90D6-46EA-9F01-F3533889545A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E0904DC9-90D6-46EA-9F01-F3533889545A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E0904DC9-90D6-46EA-9F01-F3533889545A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF0C3907-370B-406F-AA3D-D967FAC51724}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF0C3907-370B-406F-AA3D-D967FAC51724}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF0C3907-370B-406F-AA3D-D967FAC51724}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF0C3907-370B-406F-AA3D-D967FAC51724}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
